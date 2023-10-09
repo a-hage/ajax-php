@@ -7,7 +7,7 @@
       }
       
       $start = ($current_page - 1) * $per_page;
-      
+      /* funktion aus der productsModule.php */
       $total = getAllProducts($kunde)[0]['ID'];
       $pages = ceil($total/$per_page);
       if($pages == 0){
