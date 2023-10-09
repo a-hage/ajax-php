@@ -8,7 +8,7 @@
       
       $start = ($current_page - 1) * $per_page;
       
-      $total = getAllProducts($kunde);
+      $total = getAllProducts($kunde[0]['ID']);
       $pages = ceil($total/$per_page);
       if($pages == 0){
         $pages = 1;
@@ -92,12 +92,12 @@
       if(!empty($results)){
         //print_r($results);
           $table .= '<div class="table-responsive" id="pContent">';
-            $table .= '<form action="products-paging.php" id="pPaging" name="pPaging" method="POST">';
-              $table .= '<input type="hidden" name="func_pPaging" id="func_pPaging" value="getProductsPaging" />';
-              $table .= '<input type="hidden" name="pcurrent_page" id="pcurrent_page" value="'.$page.'" />';
-              $table .= '<input type="hidden" name="pper_page" id="pper_page" value="'.per_page.'" />';
-              $table .= '<input type="hidden" name="pkunde" id="pkunde" value="'.$kunde.'" />';
-            $table .= '</form>';
+              $table .= '<form action="products-paging.php" id="yPaging" name="yPaging" method="POST">';
+                $table .= '<input type="hidden" name="func_yPaging" id="func_yPaging" value="getProductsYearPaging" />';
+                $table .= '<input type="hidden" name="ycurrent_page" id="ycurrent_page" value="'.$current_page.'" />';
+                $table .= '<input type="hidden" name="yper_page" id="yper_page" value="'.$per_page.'" />';
+                $table .= '<input type="hidden" name="ykunde" id="ykunde" value="'.$kunde.'" />';
+              $table .= '</form>';
               $table .= '<table class="table table-striped">';
                   $table .='<thead>';
                   $table .= '<tr class="text-start">';
