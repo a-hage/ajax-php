@@ -21,8 +21,10 @@
       LEFT JOIN Category C ON C.ID = P.categoryId
       WHERE YEAR(P.createDate) = '".$this_year."' AND k.Name LIKE '".$kunde."%' ORDER BY ID ASC OFFSET $start ROWS FETCH NEXT $per_page ROWS ONLY;
       ";
+    /* funktion aud der dbconnect.php */
       $results = db_get_FETCH_ASSOC($mspdo, $sql);
-  
+
+      /* funktion aus der productsModule.php */
       $configPage = getConfig_Page($kunde);
       $products_Column = $configPage->products;
       //print_r($products_Column);
