@@ -1,6 +1,6 @@
 <?php
   
-  function getProductTable($kunde, $current_page, $per_page){
+  function getProductYearTable($kunde, $current_page, $per_page){
       global $mspdo;
       if(!isset($current_page) || $current_page == 0){
   		$surrent_page = 1;
