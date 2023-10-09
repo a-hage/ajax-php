@@ -8,7 +8,7 @@
       
       $start = ($current_page - 1) * $per_page;
       
-      $total = getAllProducts($kunde[0]['ID']);
+      $total = getAllProducts($kunde)[0]['ID'];
       $pages = ceil($total/$per_page);
       if($pages == 0){
         $pages = 1;
