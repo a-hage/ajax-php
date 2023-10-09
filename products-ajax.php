@@ -131,7 +131,7 @@
                   $pagingFooter .= '<div class="pagination-container-one">';
                     $pagingFooter .= '<nav aria-label="Page navigation example">';
                       $pagingFooter .= '<ul class="pagination justify-content-end" id="yPaginateFoot">';
-                        if($pageY > 1){
+                        if($page > 1){
                           $pagingFooter .= '<li class="page-item" id="'.($page-1).'">';
                             $pagingFooter .= '<a class="page-link" aria-label="Previous">';
                               $pagingFooter .= '<span aria-hidden="true">&laquo;</span>';
@@ -149,7 +149,7 @@
                           $pagingFooter .= '<a class="page-link">'.$page.'</a>';
                         $pagingFooter .= '</li>';
   
-                        if($pageY < $pagesY){
+                        if($page < $pages){
                           $pagingFooter .= '<li class="page-item" id="'.($page+1).'">';
                             $pagingFooter .= '<a class="page-link" aria-label="Next">';
                               $pagingFooter .= '<span aria-hidden="true">&raquo;</span>';
