@@ -16,8 +16,8 @@
     //echo $kunde;
 
     $limit = 15;
-    $startY = 0;
-    $pageY = 1;
+    $start = 0;
+    $page = 1;
     require('productsModule.php');
   
 
@@ -294,7 +294,7 @@
                     <div id="productsContent">
                       <?php 
                             /* aufruf der Funktion getProductTable aus dem productsModule.php */
-                            echo getProducstTable($kunde, $start, $limit, $page);
+                            echo getProducstTable($kunde);
                       ?>
                     </div>
                   </div>
